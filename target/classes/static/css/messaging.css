@@ -1,0 +1,87 @@
+body {
+    background: #222;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/1200/800?image=802');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*de aici*/
+
+.btn-group{
+    overflow: auto;
+    z-index: 1;
+    padding: 30px 20px 30px 20px;
+    background-color:rgba(255,255,255,0.4);}
+
+.sus{
+    display:inline-block;
+    float:right;
+    padding: 12px 20px 12px 40px;
+}
+
+#Qbtn{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width:7%;
+    background: LightSlateGray;
+    border-radius: 15px ;
+    border:none;
+    padding: 20px;
+
+    color: #FFFFFF;
+    font-size: 14px;
+
+
+
+}
+#Qbtn:hover{
+    background-color: Gray;
+}
+#Lbtn{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width:7%;
+    background: LightSlateGray;
+    border-radius: 15px ;
+    border:none;
+    padding: 20px;
+    color: #FFFFFF;
+    font-size: 14px;
+
+
+
+}
+#Lbtn:hover{
+    background-color: Gray;
+}
+
+#send{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width:20%;
+    background: LightSlateGray;
+    border-radius: 15px ;
+    border:none;
+    padding: 20px;
+    color: #FFFFFF;
+    font-size: 14px;
+
+}
+#send:hover{
+    background-color: Gray;
+}
+
+#divSend
+{
+    display:inline-block;
+    position:relative;
+}
+#send{
+    position:absolute;
+    bottom:5px;
+    right:5px;
+}
+
+#mesaje{
+    display:block;
+}

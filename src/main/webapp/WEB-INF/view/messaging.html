@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <link th:href="@{//css/messaging.css}" href="/css/messaging.css" rel="stylesheet" type="text/css"  />
+    <style>
+        #conv {
+            height:350px;
+            width:500px;
+            font-size:20px;
+        }
+
+        #mesaje{
+            height:80px;
+            width:500px;
+            font-size:14px;
+        }
+    </style>
+
+</head>
+<body onload="start()">
+    <div class="btn-group">
+        <button id="Lbtn" class="sus" type="button" th:onclick="'logout()'" >Logout</button>
+        <button id="Qbtn" class="sus" type="button" onclick="window.location.href='/questions'" value="Questions">Questions</button>
+    </div>
+    <div style="display: none">
+    <p id="username1" style="visibility: hidden" th:text="${currentUser}">currentUser</p>
+    <p id="username2" style="visibility: hidden" th:text="${otherUser}">otherUser</p>
+    </div>
+    <div style="display: none" th:each="message,iter:${Messages}">
+        <p class="mesaje" th:id="${message}" th:text="${message}"></p>
+        <p class="autori" th:with="var=${iter.index}" th:id="${listAuthors.get(var)}" ></p>
+    </div>
+
+
+    <div id="divMesaje">
+    <textarea  readonly id="conv" th:width="300" th:height="400" ></textarea><br>
+    </div>
+    <div id="divSend">
+    <textarea id="mesaje" ></textarea>
+        <div>
+    <button id="send" onclick="sendMessage()">Send</button>
+        </div>
+
+
+    </div>
+
+    <script th:src="@{//js/chat.js}" src="/js/chat.js"  ></script>
+
+</body>
+</html>

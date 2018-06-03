@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions</title>
+    <link th:href="@{css/questions1.css}" href="/css/questions1.css" rel="stylesheet" type="text/css"  />
+</head>
+<body>
+
+        <div class="btn-group">
+        <input  type="text" id="search" onkeyup="search()" placeholder="Search for questions..">
+        <button id="Lbtn" class="sus" type="button" th:onclick="'logout()'" >Logout</button>
+        <button id="Cbtn" class="sus" type="button" onclick="location.href='chat'" value="Chat">Chat</button>
+        </div>
+        <div id="formular">
+            <form th:action="@{/questions}" th:object="${question}" method="post">
+            <textarea th:width="300px" th:field="*{content}" th:height="250" placeholder="ASK SOMETHING..."></textarea>
+            <button type="submit">Send Question</button>
+            </form>
+        </div>
+    <div id="intrebari">
+    <ul id="lista" th:each="question:${questions}">
+        <li th:id="${question.getId()}" ><a th:href="@{'/questions/'+${question.getId()}}" th:text="${question.getContent()}"></a> </li>
+
+    </ul>
+    </div>
+        <script th:src="@{js/questions.js}"  >
+
+
+        </script>
+
+</body>
+</html>

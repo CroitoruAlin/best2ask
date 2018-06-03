@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script th:src="@{js/websocketconnection.js}" src="/js/websocketconnection.js"  ></script>
+    <script th:src="@{js/chatList.js}" src="/js/chatList.js"  ></script>
+    <link th:href="@{css/chat.css}" href="/css/chat.css" rel="stylesheet" type="text/css"  />
+
+</head>
+<div class="btn-group">
+    <button id="Lbtn" class="sus" type="button" th:onclick="'logout()'" >Logout</button>
+    <button id="Qbtn" class="sus" type="button" onclick="window.location.href='questions';" value="Chat">Questions</button>
+</div>
+<body onload="start()">
+
+<h2 id="test">Currently logged in users</h2>
+<div th:id="div0">
+    <div th:id="div1" th:each="user : ${usersList}">
+    <p th:id="${user}" th:text="${user}">user</p>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+body{
+    background: #222;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/1200/800?image=802');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+#div0 {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: auto  auto 100px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    background: #4CAF50;
+    width: 80%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+
+}
+p:hover
+{
+
+    color:black;
+    background-color: forestgreen;
+}
+
+@font-face {
+    font-family: font_special;
+    src: url(sansation_light.woff);
+}
+
+h2{
+    color:whitesmoke;
+    font-family: font_special;
+}
+* {
+    font-family: font_special;
+}
+/*de aici*/
+
+.btn-group{
+    overflow: auto;
+    z-index: 1;
+    padding: 30px 20px 30px 20px;
+    background-color:rgba(255,255,255,0.4);}
+
+.sus{
+    display:inline-block;
+    float:right;
+    padding: 12px 20px 12px 40px;
+}
+
+#Qbtn{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width:7%;
+    background: LightSlateGray;
+    border-radius: 15px ;
+    border:none;
+    padding: 20px;
+
+    color: #FFFFFF;
+    font-size: 14px;
+
+
+
+}
+#Qbtn:hover{
+    background-color: Gray;
+}
+#Lbtn{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width:7%;
+    background: LightSlateGray;
+    border-radius: 15px ;
+    border:none;
+    padding: 20px;
+    color: #FFFFFF;
+    font-size: 14px;
+
+
+
+}
+#Lbtn:hover{
+    background-color: Gray;
+}

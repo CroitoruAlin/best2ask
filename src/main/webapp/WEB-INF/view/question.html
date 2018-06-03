@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Question</title>
+    <link th:href="@{//css/questions.css}" href="/css/questions.css" rel="stylesheet" type="text/css"  />
+</head>
+<body>
+        <div id="lista">
+        <div id="question">
+            <p th:text="${authorUser.getUsername()}"></p>
+             <p th:text="${question.getContent()}"></p>
+
+        </div>
+
+        <ul id="lista" th:each="answer,iter:${listAnswers}"  >
+            <div class="answers">
+                     <p th:with="var=${iter.index}" th:text="${listUsers.get(var).getUsername()}" ></p>
+                     <li th:id="${answer.getIdcomments()}" ><p th:text="${answer.getContent()}"></p></li>
+
+            </div>
+        </ul>
+
+
+            <form th:action="@{/questions/}+${question.getId()}" th:object="${answer}" method="post">
+        <textarea th:width="300px" th:field="*{content}" th:height="250" placeholder="ANSWER.."></textarea><br>
+                <button type="submit">Answer</button>
+            </form>
+        </div>
+
+</body>
+</html>
